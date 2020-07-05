@@ -139,7 +139,7 @@ f[find(a)] = find(b);  // 正确
       else
         return block[a.l] < block[b.l];
     ```
-    上述代码中 `(block[a.l]&1)^(a.r<b.r)` 不满足严格弱序的要求 2。
+    上述代码中 `(block[a.l]&1)^(a.r<b.r)` 不满足要求 2 中的严格弱序。
     改成这样就正确了。
     ```cpp
     bool operator<(const int a, const int b) {
